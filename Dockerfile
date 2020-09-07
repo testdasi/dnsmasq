@@ -17,4 +17,5 @@ RUN apk update \
 RUN mkdir -p /etc/default/
 RUN echo -e "ENABLED=1\nIGNORE_RESOLVCONF=yes" > /etc/default/dnsmasq
 
-ENTRYPOINT ["webproc","--config","/etc/dnsmasq.conf","--","dnsmasq","--no-daemon"]
+#ENTRYPOINT ["webproc","--config","/etc/dnsmasq.conf","--","dnsmasq","--no-daemon"]
+ENTRYPOINT ["dnsmasq","--no-daemon"]
